@@ -11,7 +11,7 @@ h1 {
     font-family: "EB Garamond", serif;
     font-optical-sizing: auto;
     font-weight: weight;
-    font-style: normal;
+    font-style: italic;
 }
 
 h4 {
@@ -32,30 +32,41 @@ main {
     font-weight: 150;
     font-style: normal;
 }
+header{
+    background-color: rgba(128, 191, 228);
+}
 
-.botonera{  
-    /*barradeinicio*/
+header li{
     color: rgb(58, 58, 58); 
     text-align: center;
-    font-size: 30px;
-    margin: 50px;
+    font-size: 20px;
+    margin: 30px;
     text-decoration:none;
     transition: color 0.3s ease;
-}
-.botonera:hover {
-    color: #ffffff;
-}
-
-.navbar {
-    background-color: rgba(128, 191, 228);
-    padding: 10px 40px;
-    display: flex;
-    align-items: center;
     justify-content: space-between;
     position: relative;
-    width: 100%;
-    height: 100%;
 }
+
+.navbar-nav {
+    text-align: center;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 70px; /* Espacio entre ítems */
+}
+
+.nav-item{
+    font-size: 30px;
+    text-align: center;
+    justify-content: space-between;
+}
+.dropdown-menu.show{
+    background-color:rgb(74, 74, 77);
+}
+.dropdown-item {
+    color: rgb(128, 191, 228) ;
+}
+
 
 * {
     margin: 0;
@@ -63,34 +74,8 @@ main {
     box-sizing: border-box;
     }
 
-/* Escudo a la izquierda */
-.escudo {
-    width: 105px;
-    height: auto;
-}
 
-/* Contenedor para centrar el menú */
-.menu-container {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-}
 
-/* Lista del menú */
-.menu {
-    list-style: none;
-    display: flex;
-    gap: 40px;
-    margin: 0;
-    padding: 0;
-}
-
-/* Ítems del menú */
-.menu li {
-    display: inline-block; 
-    text-decoration: none;
-    text-decoration-line: none;
-}
 
 
 table {
@@ -114,6 +99,7 @@ th {
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
+/**FORMULARIO**/
 
 .location-cen {
     text-decoration: none;
@@ -136,15 +122,120 @@ tr:nth-child(even) {
 
 
 
-.formulario {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #ffffffc9;
-    border-radius: 10px;
+.contacto-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.contacto-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 1.2em;
+    color: rgb(102, 102, 102);
+}
+
+/* Contenedor del formulario */
+.form-center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 300px);
+    padding: 40px 0;
+}
+
+.form-container {
+    width: 100%;
     max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-}       
+    background: linear-gradient(145deg, rgb(255, 255, 255), #f5f5f5);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.form-container:hover {
+    transform: translateY(-5px);
+}
+
+.form-container h1 {
+    text-align: center;
+    color: rgb(51, 51, 51);
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+/* Estilos del formulario */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: rgb(51, 51, 51);
+    font-weight: 600;
+    font-size: 0.95em;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px 16px;
+    border: 2px solid rgb(225, 225, 225);
+    border-radius: 8px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    background-color: rgb(255, 255, 255);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: rgb(0, 180, 80);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 180, 80, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #999;
+}
+
+.form-submit-btn {
+    background: linear-gradient(45deg, rgba(128, 191, 228), rgb(0, 153, 241));
+    color: rgb(51, 51, 51);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.form-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgb(0, 0, 0);
+}
+
+.form-submit-btn:active {
+    transform: translateY(0);
+}
+
+.form-submit-btn i {
+    font-size: 1.2em;
+}
 
 section h2 {
     text-align: center;
@@ -298,6 +389,13 @@ footer {
     text-decoration: none; /* Elimina subrayado de los enlaces */
     color: inherit;        /* Opcional: hereda el color del texto del padre */
     }
+
+    /* Escudo a la izquierda */
+.escudo {
+    width: 105px;
+    height: auto;
+}
+
 
 
     .footer-container {

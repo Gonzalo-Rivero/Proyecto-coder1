@@ -9,19 +9,48 @@
     <link rel="icon" href="../img/escudobueno.png">
 </head>
 <body>
-    <header>
-        <nav class="navbar"> <!-- Barra de navegación -->
-            <!--LETSGOOOOo-->
-            <a href="../index.html"><img class="escudo" src="../img/escudobueno.png" alt="Logo Club El Nacional"></a>
-            <div class="menu-container">
-                <ul class="menu">
-                    <li><a class="botonera" href="../index.html">Inicio</a></li>
-                    <li><a class="botonera" href="../pages/galeria.html">Galería</a></li>
-                    <li><a class="botonera" href="../pages/partidos.html">Partidos</a></li>
-                    <li><a class="botonera" href="../pages/jugadores.html">Jugadores</a></li>
-                    <li><a class="botonera" href="../pages/staff.html">Staff</a></li>
-                    <li><a class="botonera" href="../pages/contacto.html">Contacto</a></li>
-                </ul>
+    <header> <!--Cabecera -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../img/escudobueno.png" alt="" width="100" height="100"
+                        class="d-inline-block align-text-top">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/galeria.html">Galería</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/partidos.html">Partidos</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Personal
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../pages/backs.html">Backs</a></li>
+                                <li><a class="dropdown-item" href="../pages/jugadores.html">Forwards</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="../pages/staff.html">Staff</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
