@@ -94,14 +94,71 @@ header li {
 }
 
 /**Index**/
+h3{
+    font-family: "EB Garamond", serif;
+    font-style: italic;
+    color: rgb(128, 191, 228) ;
+
+}
 .inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    height: 500px;
+    min-height: 100vh;
+    padding: 40px 20px;
     background-image: url(../img/fondo.png);
-    background-position: center;
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    position: relative;
+    color: white;
+}
+
+.inicio::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55); 
+    z-index: 1;
+    border-radius: inherit;
+}
+
+
+.inicio h1,
+.inicio h3,
+.inicio p {
+    position: relative;
+    z-index: 2;
+    margin: 10px 0;
+}
+h3{
+    font-family: "EB Garamond", serif;
+    font-style: italic;
+    color: rgb(128, 191, 228) ;
+
+}
+
+.inicio h1 {
+    font-size: 42px;
+    font-family: "EB Garamond", serif;
+    letter-spacing: 2px;
+    color: rgb(45, 45, 86);
+}
+
+
+
+.inicio p {
+    font-size: 18px;
+    font-family: "Bebas Neue", sans-serif;
+    max-width: 800px;
+    margin: 10px auto;
+    line-height: 1.6;
 }
 
 .copa-p {
@@ -152,25 +209,31 @@ section h2:hover {
 
 .fotos-copa {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* 2 columnas iguales */
-    gap: 5px;
-    /* Espacio entre las imágenes (podés ajustar el valor) */
-    padding: 10px;
-    /* Opcional, para que no queden pegadas al borde */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    background-color: #fdfdfd;
+    border-radius: 12px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .fotos-copa img {
-    width: 90%;
-    /* Hace que las imágenes ocupen todo el ancho de su celda */
-    height: auto;
-    /* Mantiene la proporción original */
-    border-radius: 10px;
-    /* Opcional, bordes redondeados */
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4/3;
     object-fit: cover;
-    /* Opcional, para que se ajusten bien al espacio */
-    border: 3px solid black;
+    border-radius: 10px;
+    border: 2px solid #000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.fotos-copa img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
 
 .galeria-videos {
     display: grid;
@@ -513,27 +576,56 @@ h3 {
 }
 
 /*!Galeria!*/
+body {
+    margin: 0;
+    font-family: 'EB Garamond', serif;
+    background-color: #f5f5f5;
+}
+
+.titulos {
+    text-align: center;
+    font-size: 36px;
+    margin: 60px 20px 30px;
+    color: #222;
+}
+
 .galeria {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 40px 20px;
     background-color: #ffffffc5;
     border-radius: 12px;
-    max-width: 800px;
-    margin: 0 auto;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
 }
 
-.galeria img,
+.video-container {
+    margin-bottom: 40px;
+}
+
 .galeria video {
-    max-width: 100%;
+    width: 100%;
+    max-height: 500px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.galeria img:hover {
-    transform: scale(1.15);
+/* NUEVO: Cuadrícula de imágenes */
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.grid-galeria img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.grid-galeria img:hover {
+    transform: scale(1.05);
 }
 
 
@@ -615,6 +707,7 @@ footer a {
 @media (max-width: 600px) {
     .fotos-copa {
         grid-template-columns: 1fr;
+        margin: 50px;
         /* Una sola columna en móviles */
     }
 }
@@ -631,6 +724,7 @@ footer a {
 
     header,
     main,
+    .fotos-copa
     .contacto-section,
     .Jugadores,
     .staff,
@@ -948,6 +1042,31 @@ footer a {
     }
 }
 
+/* Ajuste del contenedor principal para pantallas grandes */
+@media (min-width: 1200px) {
+    .contacto-section {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .form-container {
+        max-width: 600px;
+    }
+
+    .Jugadores {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .staff {
+        max-width: 600px;
+    }
+
+    .galeria {
+        max-width: 1000px;
+    }
+}
+
 @media (max-width: 768px) {
     .Jugadores {
         grid-template-columns: repeat(2, 1fr);
@@ -959,3 +1078,4 @@ footer a {
         grid-template-columns: 1fr;
     }
 }
+
