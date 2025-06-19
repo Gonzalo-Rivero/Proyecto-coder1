@@ -11,7 +11,7 @@
 }
 
 .titulos {
-    color: rgb(45, 45, 86);
+    color: #2d2d56;
     font-size: 35px;
     text-align: center;
     font-family: "EB Garamond", serif;
@@ -21,7 +21,7 @@
 }
 
 .inicio h3 {
-    color: rgba(128, 191, 228);
+    color: #80bfe4;
     font-size: 25px;
     text-align: center;
     font-family: "EB Garamond", serif;
@@ -48,7 +48,21 @@ main {
 }
 
 header {
-    background-color: rgba(128, 191, 228);
+    background: linear-gradient(270deg, #80bfe4, #2d2d56);
+    background-size: 400% 400%;
+    animation: gradientAnimation 6s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 header li {
@@ -62,6 +76,26 @@ header li {
     position: relative;
 }
 
+
+.nav-link:hover{
+    transition: color 1s ease-in-out;
+    color: #f0f0f0;
+    font-size: 35px;
+    -webkit-transition: font-size 1s ease-in-out;
+    transition: font-size 1s ease-in-out;
+}
+
+/*.nav-link.active{
+    -webkit-transition: font-size 1s ease-in-out;
+    transition: font-size 1s ease-in-out;
+}*/
+.nav-link.active:hover{
+    transition: color 1s ease-in-out;
+    color: #f0f0f0;
+    font-size: 35px;
+    -webkit-transition: font-size 1s ease-in-out;
+    transition: font-size 1s ease-in-out;
+}
 .navbar-nav {
     text-align: center;
 }
