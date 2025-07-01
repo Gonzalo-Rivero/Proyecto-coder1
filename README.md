@@ -1,12 +1,10 @@
-# 🏉 Club El Nacional - Página Web Oficial
+#  Club El Nacional - Página Web Oficial
 
-![Club El Nacional](./img/escudobueno.png)
-
-## 📖 Descripción del Proyecto
+##  Descripción del Proyecto
 
 Este proyecto es una **página web institucional** del **Club El Nacional**, un prestigioso club de rugby ubicado en Bahía Blanca, Argentina. La página web fue desarrollada como parte de un proyecto académico para el curso de **Desarrollo Web** de **CoderHouse**.
 
-## 🎯 Objetivo Académico
+##  Objetivo Académico
 
 Esta página web fue creada con fines **educativos y académicos** como proyecto final del curso de Desarrollo Web, donde se aplicaron los conocimientos adquiridos en:
 
@@ -17,7 +15,7 @@ Esta página web fue creada con fines **educativos y académicos** como proyecto
 - **Responsive Design** para adaptabilidad móvil
 - **Buenas prácticas** de desarrollo web
 
-## 🏆 Sobre el Club El Nacional
+##  Sobre el Club El Nacional
 
 El Club El Nacional es una institución deportiva fundada en **1919** en Bahía Blanca, Argentina. Es reconocido por:
 
@@ -26,20 +24,20 @@ El Club El Nacional es una institución deportiva fundada en **1919** en Bahía 
 - 🏉 Miembro activo de la **Unión de Rugby del Sur (URS)**
 - 🤝 Promotor del intercambio cultural internacional
 
-## 🌐 Características de la Página Web
+##  Características de la Página Web
 
-### 📱 Diseño Responsive
+###  Diseño Responsive
 - Adaptable a dispositivos móviles, tablets y desktop
 - Navegación optimizada para todas las pantallas
 - Footer completamente responsive
 
-### 🎨 Características Visuales
+###  Características Visuales
 - Diseño moderno con gradientes y animaciones
 - Paleta de colores institucional del club
 - Tipografías elegantes (EB Garamond, Bebas Neue)
 - Efectos hover y transiciones suaves
 
-### 📄 Secciones Incluidas
+###  Secciones Incluidas
 - **Inicio**: Presentación del club y Copa Patagonia
 - **Galería**: Fotos y videos del club
 - **Partidos**: Información sobre encuentros deportivos
@@ -49,7 +47,7 @@ El Club El Nacional es una institución deportiva fundada en **1919** en Bahía 
   - Staff técnico
 - **Contacto**: Formulario y información de ubicación
 
-### 🛠️ Tecnologías Utilizadas
+###  Tecnologías Utilizadas
 - **HTML5**
 - **CSS3 / SCSS**
 - **Bootstrap 5.3.6**
@@ -57,7 +55,7 @@ El Club El Nacional es una institución deportiva fundada en **1919** en Bahía 
 - **Google Fonts**
 - **JavaScript** (Bootstrap components)
 
-## 🎓 Información Académica
+##  Información Académica
 
 - **Curso**: Desarrollo Web
 - **Institución**: CoderHouse
@@ -65,24 +63,14 @@ El Club El Nacional es una institución deportiva fundada en **1919** en Bahía 
 - **Proyecto**: Página web institucional
 - **Enfoque**: Frontend responsive con SCSS y Bootstrap
 
-## 📞 Contacto del Club
 
-- **Dirección**: Calle 14 de Julio 3250, Bahía Blanca, Argentina
-- **Instagram**: [@rugbycen](https://www.instagram.com/rugbycen/)
-- **YouTube**: [CEN Oficial](https://www.youtube.com/@CENOficial)
-- **WhatsApp**: +54 9 291 641-1271
-
-
-### 🎓 Proyecto Académico
+###  Proyecto Académico
 Este sitio web fue desarrollado con fines **educativos** como parte del curso de **Desarrollo Web** de **CoderHouse**. 
 
-### 📸 Contenido Multimedia
+### Contenido Multimedia
 - Las imágenes y videos pertenecen al **Club El Nacional**
 - El escudo y logo son propiedad del club
 - Las fotografías de jugadores y eventos tienen derechos reservados
-
-### 🔗 Enlaces y Redes Sociales
-Los enlaces a redes sociales y contenido multimedia dirigen a las cuentas oficiales del **Club El Nacional**.
 
 ---
 
@@ -90,7 +78,7 @@ Los enlaces a redes sociales y contenido multimedia dirigen a las cuentas oficia
 **Curso**: Desarrollo Web - CoderHouse  
 **Año**: 2025
 
-## 📜 Derechos de Autor
+## Derechos de Autor
 © 2025 **Gonzalo Rivero** - Bahía Blanca, Argentina.  
 Todos los derechos reservados.
 
