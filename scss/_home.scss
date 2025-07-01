@@ -1,0 +1,213 @@
+// Importación de variables y mixins
+@use 'variables';
+@use 'mixins';
+
+// Estilos de la sección de inicio
+.inicio {
+  @include mixins.flex-column-center;
+  min-height: 100vh;
+  padding: variables.$spacing-lg variables.$spacing-sm;
+  background-image: url(../img/fondo.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  position: relative;
+  color: variables.$white;
+  @include mixins.overlay;
+  
+  h1 {
+    position: relative;
+    z-index: variables.$z-index-overlay;
+    margin: variables.$spacing-xs 0;
+    font-size: variables.$font-size-xxl;
+    font-family: variables.$font-primary;
+    letter-spacing: 2px;
+    color: variables.$primary-color;
+  }
+  
+  h3 {
+    color: variables.$secondary-color;
+    font-size: variables.$font-size-lg;
+    text-align: center;
+    font-family: variables.$font-primary;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: italic;
+    position: relative;
+    z-index: variables.$z-index-overlay;
+    margin: variables.$spacing-xs 0;
+  }
+  
+  p {
+    position: relative;
+    z-index: variables.$z-index-overlay;
+    margin: variables.$spacing-xs 0;
+    font-size: variables.$font-size-sm;
+    font-family: variables.$font-secondary;
+    max-width: 800px;
+    margin: variables.$spacing-xs auto;
+    line-height: 1.6;
+  }
+}
+
+// Estilos de la sección Copa Patagonia
+.copa-p {
+  text-align: center;
+  
+  div h3 {
+    text-align: center;
+    font-family: variables.$font-secondary;
+    color: variables.$primary-color;
+  }
+  
+  p {
+    font-family: variables.$font-secondary;
+    font-size: variables.$font-size-md;
+    margin: variables.$spacing-sm;
+  }
+  
+  img {
+    width: 500px;
+    height: auto;
+    background-color: lightgray;
+    border: 3px solid variables.$black;
+  }
+}
+
+// Estilos de la sección de fotos de la copa
+.fotos-copa {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: variables.$spacing-sm;
+  padding: variables.$spacing-lg;
+  
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    @include mixins.transition(transform);
+    
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+// Estilos de la galería de videos
+.galeria-videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: variables.$spacing-lg;
+  padding: variables.$spacing-lg;
+  
+  .video-yt {
+    position: relative;
+    cursor: pointer;
+    @include mixins.transition(transform);
+    
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      @include mixins.transition(filter);
+    }
+    
+    &:hover {
+      transform: translateY(-5px);
+      
+      img {
+        filter: brightness(0.7);
+      }
+      
+      .play-button {
+        background-color: rgba(variables.$secondary-color, 0.9);
+        transform: scale(1.1);
+      }
+    }
+    
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(variables.$primary-color, 0.8);
+      color: variables.$white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      @include mixins.flex-center;
+      font-size: variables.$font-size-lg;
+      @include mixins.transition(background-color, transform);
+    }
+    
+    p {
+      margin-top: variables.$spacing-xs;
+      font-weight: bold;
+      color: variables.$primary-color;
+    }
+  }
+}
+
+// Estilos de la sección de historia
+.historia {
+  padding: variables.$spacing-lg;
+  
+  h2 {
+    color: variables.$primary-color;
+    font-size: variables.$font-size-xl;
+    margin-bottom: variables.$spacing-md;
+    @include mixins.transition(color);
+    
+    &:hover {
+      color: variables.$secondary-color;
+    }
+  }
+  
+  h3 {
+    color: variables.$secondary-color;
+    font-size: variables.$font-size-lg;
+    margin: variables.$spacing-md 0;
+  }
+  
+  p {
+    font-size: variables.$font-size-sm;
+    line-height: 1.6;
+    margin: variables.$spacing-sm 0;
+    text-align: justify;
+  }
+  
+  div {
+    margin-top: variables.$spacing-lg;
+    
+    a {
+      color: variables.$secondary-color;
+      text-decoration: none;
+      font-weight: bold;
+      @include mixins.transition(color);
+      
+      &:hover {
+        color: variables.$primary-color;
+      }
+    }
+  }
+}
+
+// Media queries para responsividad
+@include mixins.media-query(md) {
+  .fotos-copa {
+    grid-template-columns: 1fr;
+  }
+  
+  .galeria-videos {
+    grid-template-columns: 1fr;
+  }
+}
+
+@include mixins.media-query(xs) {
+  .galeria-videos {
+    grid-template-columns: 1fr;
+  }
+} 

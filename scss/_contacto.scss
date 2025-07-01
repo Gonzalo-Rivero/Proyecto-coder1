@@ -1,0 +1,165 @@
+// Importación de variables y mixins
+@use 'variables';
+@use 'mixins';
+
+// Estilos para la sección de contacto
+.contacto-section {
+  padding: variables.$spacing-lg;
+  width: 100%;
+  max-width: 1000px; // Limitar ancho máximo para mejor centrado
+  margin: 0 auto;
+}
+
+.contacto-intro {
+  text-align: center;
+  margin-bottom: variables.$spacing-xl;
+  
+  h1 {
+    color: variables.$primary-color;
+    font-size: variables.$font-size-xl;
+    margin-bottom: variables.$spacing-md;
+  }
+  
+  p {
+    color: variables.$primary-color;
+    font-size: variables.$font-size-md;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.form-center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 210px;
+  padding: variables.$spacing-lg;
+}
+
+.form-container {
+  background: variables.$white;
+  padding: variables.$spacing-xl;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  @include mixins.transition(transform);
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
+  
+  h1 {
+    color: variables.$primary-color;
+    font-size: variables.$font-size-xl;
+    margin-bottom: variables.$spacing-lg;
+    text-align: center;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-md;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-xs;
+  
+  label {
+    color: variables.$primary-color;
+    font-weight: bold;
+  }
+  
+  input,
+  textarea {
+    padding: variables.$spacing-sm;
+    border: 2px solid variables.$light-gray;
+    border-radius: 8px;
+    font-size: variables.$font-size-sm;
+    @include mixins.transition(border-color);
+    
+    &:focus {
+      outline: none;
+      border-color: variables.$secondary-color;
+      box-shadow: 0 0 0 3px rgba(variables.$secondary-color, 0.1);
+    }
+    
+    &::placeholder {
+      color: variables.$dark-gray;
+      opacity: 0.7;
+    }
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+}
+
+.form-submit-btn {
+  @include mixins.button-style(variables.$primary-color, variables.$white);
+  width: 100%;
+  padding: variables.$spacing-sm variables.$spacing-lg;
+  font-size: variables.$font-size-md;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  @include mixins.transition(background-color, transform);
+  
+  &:hover {
+    background-color: darken(variables.$primary-color, 10%);
+  }
+  
+  &:hover {
+    transform: translateY(-2px);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+  
+  i {
+    margin-right: variables.$spacing-xs;
+  }
+}
+
+.location-cen {
+  color: variables.$secondary-color;
+  text-decoration: none;
+  font-weight: bold;
+  @include mixins.transition(color);
+  
+  &:hover {
+    color: variables.$primary-color;
+  }
+}
+
+.horario {
+  margin-top: variables.$spacing-lg;
+}
+
+.horario-chico {
+  font-size: variables.$font-size-sm;
+  color: variables.$dark-gray;
+}
+
+// Media queries para responsividad
+@include mixins.media-query(md) {
+  .form-container {
+    padding: variables.$spacing-lg;
+  }
+}
+
+@include mixins.media-query(lg) {
+  .contacto-section {
+    padding: variables.$spacing-xl;
+  }
+  
+  .form-container {
+    max-width: 600px;
+  }
+} 

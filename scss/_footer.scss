@@ -1,0 +1,215 @@
+// Importación de variables y mixins
+@use 'variables';
+@use 'mixins';
+
+// Estilos del footer
+footer {
+  background: linear-gradient(90deg, #2d2d56 0%, #80bfe4 100%);
+  color: variables.$white;
+  padding: 40px 0 0 0;
+  margin-top: auto;
+  width: 100%;
+  
+  a {
+    color: variables.$white;
+    text-decoration: none;
+    @include mixins.transition(color);
+    
+    &:hover {
+      color: variables.$light-gray;
+    }
+  }
+}
+
+// Escudo del club en el footer
+.escudo {
+  width: 80px;
+  height: 80px;
+  margin-right: variables.$spacing-md;
+  filter: drop-shadow(0 2px 8px rgba(45,45,86,0.15));
+  transition: transform 0.3s;
+}
+
+.escudo:hover {
+  transform: scale(1.08) rotate(-5deg);
+}
+
+// Contenedor principal del footer
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: variables.$spacing-md;
+  padding: variables.$spacing-md 0;
+  background: linear-gradient(90deg, rgba(128,191,228,0.95) 0%, rgba(45,45,86,0.95) 100%);
+  box-shadow: 0 -4px 24px 0 rgba(45,45,86,0.10);
+  border-top: 3px solid rgba(45,45,86,0.15);
+  width: 100%;
+  border-radius: 0;
+  max-width: none;
+  margin: 0;
+}
+
+// Enlaces sociales
+.social-links {
+  @include mixins.flex-center;
+  gap: variables.$spacing-lg;
+  
+  a {
+    @include mixins.transition(color);
+    font-weight: bold;
+    
+    &:hover {
+      color: variables.$light-gray;
+    }
+  }
+}
+
+// Enlaces del footer
+.footerpie {
+  position: relative;
+  color: #1a2340;
+  font-size: variables.$font-size-md;
+  font-family: variables.$font-primary;
+  text-decoration: none;
+  margin: 0 variables.$spacing-sm;
+  padding: 5px 0;
+  transition: color 0.4s cubic-bezier(0.4,0,0.2,1);
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+
+  // Subrayado animado
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, variables.$secondary-color, variables.$primary-color);
+    border-radius: 2px;
+    transition: width 0.4s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  // Efecto creativo al pasar el mouse
+  &:hover::after, &:focus::after {
+    width: 100%;
+  }
+  &:hover, &:focus {
+    color: variables.$secondary-color;
+    text-shadow: 0 2px 10px rgba(128,191,228,0.3);
+    letter-spacing: 1px;
+    transition: color 0.4s, text-shadow 0.4s, letter-spacing 0.3s;
+  }
+}
+
+// Media queries para responsividad del footer
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    gap: variables.$spacing-sm;
+    padding: variables.$spacing-md;
+    max-width: 98vw;
+  }
+  .escudo {
+    margin: 0 0 variables.$spacing-sm 0;
+  }
+  .footerpie {
+    margin: variables.$spacing-xs 0;
+    font-size: variables.$font-size-sm;
+  }
+}
+
+@include mixins.media-query(xs) {
+  .social-links {
+    flex-direction: column;
+    gap: variables.$spacing-xs;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    gap: variables.$spacing-sm;
+  }
+  
+  .escudo {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@include mixins.media-query(sm) {
+  .social-links {
+    flex-direction: column;
+    gap: variables.$spacing-xs;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    gap: variables.$spacing-md;
+  }
+  
+  .escudo {
+    width: 60px;
+    height: 60px;
+  }
+  .footerpie {
+    margin: variables.$spacing-xs 0;
+    font-size: variables.$font-size-sm;
+  }
+}
+
+@include mixins.media-query(md) {
+  .footer-container {
+    flex-direction: column;
+    gap: variables.$spacing-sm;
+  }
+  
+  .social-links {
+    flex-direction: column;
+    gap: variables.$spacing-xs;
+  }
+  
+  .escudo {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@include mixins.media-query(xl) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: variables.$spacing-lg;
+  }
+  
+  .social-links {
+    flex-direction: row;
+    gap: variables.$spacing-lg;
+  }
+  
+  .escudo {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@include mixins.media-query(xxl) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: variables.$spacing-lg;
+  }
+  
+  .social-links {
+    flex-direction: row;
+    gap: variables.$spacing-lg;
+  }
+  
+  .escudo {
+    width: 100px;
+    height: 100px;
+  }
+} 

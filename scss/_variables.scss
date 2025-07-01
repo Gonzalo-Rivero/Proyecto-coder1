@@ -1,0 +1,48 @@
+// Variables de colores
+$primary-color: #2d2d56;
+$secondary-color: #80bfe4;
+$accent-color: #0059ff2d;
+$white: #ffffff;
+$black: #000000;
+$light-gray: #f0f0f0;
+$dark-gray: rgb(58, 58, 58);
+$dropdown-bg: rgb(74, 74, 77);
+
+// Variables de fuentes
+$font-primary: "EB Garamond", serif;
+$font-secondary: "Bebas Neue", sans-serif;
+$font-body: "Noto Sans Wancho", sans-serif;
+
+// Variables de tamaños
+$font-size-xs: 10px;
+$font-size-sm: 18px;
+$font-size-md: 20px;
+$font-size-lg: 25px;
+$font-size-xl: 35px;
+$font-size-xxl: 42px;
+
+// Variables de espaciado
+$spacing-xs: 10px;
+$spacing-sm: 20px;
+$spacing-md: 30px;
+$spacing-lg: 40px;
+$spacing-xl: 50px;
+$spacing-xxl: 70px;
+
+// Variables de breakpoints
+$breakpoint-xs: 480px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1399px;
+
+// Variables de transiciones
+$transition-fast: 0.3s ease;
+$transition-normal: 1s ease-in-out;
+$transition-slow: 6s ease;
+
+// Variables de z-index
+$z-index-base: 1;
+$z-index-overlay: 2;
+$z-index-modal: 1000; 

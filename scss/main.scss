@@ -1,0 +1,20 @@
+// Archivo principal SCSS - Club El Nacional
+// Importa todos los módulos usando @use
+
+// Configuración base - importar primero para que estén disponibles en todos los módulos
+@forward 'variables';
+@forward 'mixins';
+
+// Estilos base y reset
+@use 'base';
+
+// Componentes principales
+@use 'navbar';
+@use 'footer';
+
+// Páginas específicas
+@use 'home';
+@use 'galeria';
+@use 'jugadores';
+@use 'contacto';
+@use 'tablas'; 

@@ -1,0 +1,70 @@
+// Importación de variables y mixins
+@use 'variables';
+@use 'mixins';
+
+// Estilos para las tablas
+table {
+  width: 95vw;
+  max-width: 1600px;
+  margin: 0 auto variables.$spacing-lg auto;
+  border-collapse: collapse;
+  background: variables.$white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-size: 1.25rem; // Más grande
+  box-sizing: border-box;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+th,
+td {
+  padding: 28px 20px; // Más padding para mejor visibilidad
+  text-align: center;
+  border-bottom: 1px solid variables.$light-gray;
+}
+
+th {
+  background-color: variables.$primary-color;
+  color: variables.$white;
+  font-weight: bold;
+  font-size: 1.35em;
+  letter-spacing: 1px;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(variables.$light-gray, 0.3);
+}
+
+tr:hover {
+  background-color: rgba(variables.$secondary-color, 0.1);
+  transform: scale(1.01);
+  transition: all 0.3s ease;
+}
+
+// Media queries para responsividad
+@include mixins.media-query(md) {
+  table {
+    font-size: variables.$font-size-sm;
+  }
+  
+  th,
+  td {
+    padding: variables.$spacing-xs;
+  }
+}
+
+@include mixins.media-query(xs) {
+  table {
+    font-size: variables.$font-size-xs;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  th,
+  td {
+    padding: 5px;
+  }
+} 
