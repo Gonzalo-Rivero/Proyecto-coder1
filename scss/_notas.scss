@@ -1,0 +1,45 @@
+@use 'variables';
+@use 'mixins';
+
+.notas {
+    padding: variables.$spacing-lg;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    .notas-galeria {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: variables.$spacing-md;
+        margin-top: variables.$spacing-lg;
+
+        img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+            @include mixins.transition(transform, box-shadow);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        /* 3 columnas en pantallas grandes */
+        @media (min-width: 992px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        /* 2 columnas en tablets */
+        @media (min-width: 768px) and (max-width: 991px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        /* 1 columna en móviles */
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr;
+        }
+    }
+}

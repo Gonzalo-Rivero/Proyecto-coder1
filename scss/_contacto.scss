@@ -6,20 +6,20 @@
 .contacto-section {
   padding: variables.$spacing-lg;
   width: 100%;
-  max-width: 1000px; // Limitar ancho máximo para mejor centrado
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .contacto-intro {
   text-align: center;
   margin-bottom: variables.$spacing-xl;
-  
+
   h1 {
     color: variables.$primary-color;
     font-size: variables.$font-size-xl;
     margin-bottom: variables.$spacing-md;
   }
-  
+
   p {
     color: variables.$primary-color;
     font-size: variables.$font-size-md;
@@ -44,11 +44,11 @@
   width: 100%;
   max-width: 500px;
   @include mixins.transition(transform);
-  
+
   &:hover {
     transform: translateY(-5px);
   }
-  
+
   h1 {
     color: variables.$primary-color;
     font-size: variables.$font-size-xl;
@@ -67,12 +67,12 @@
   display: flex;
   flex-direction: column;
   gap: variables.$spacing-xs;
-  
+
   label {
     color: variables.$primary-color;
     font-weight: bold;
   }
-  
+
   input,
   textarea {
     padding: variables.$spacing-sm;
@@ -80,19 +80,19 @@
     border-radius: 8px;
     font-size: variables.$font-size-sm;
     @include mixins.transition(border-color);
-    
+
     &:focus {
       outline: none;
       border-color: variables.$secondary-color;
       box-shadow: 0 0 0 3px rgba(variables.$secondary-color, 0.1);
     }
-    
+
     &::placeholder {
       color: variables.$dark-gray;
       opacity: 0.7;
     }
   }
-  
+
   textarea {
     resize: vertical;
     min-height: 120px;
@@ -109,19 +109,19 @@
   border-radius: 8px;
   cursor: pointer;
   @include mixins.transition(background-color, transform);
-  
+
   &:hover {
     background-color: darken(variables.$primary-color, 10%);
   }
-  
+
   &:hover {
     transform: translateY(-2px);
   }
-  
+
   &:active {
     transform: translateY(0);
   }
-  
+
   i {
     margin-right: variables.$spacing-xs;
   }
@@ -130,9 +130,10 @@
 .location-cen {
   color: variables.$secondary-color;
   text-decoration: none;
+  text-align: center;
   font-weight: bold;
   @include mixins.transition(color);
-  
+
   &:hover {
     color: variables.$primary-color;
   }
@@ -147,7 +148,7 @@
   color: variables.$dark-gray;
 }
 
-// Media queries para responsividad
+// Media queries responsive
 @include mixins.media-query(md) {
   .form-container {
     padding: variables.$spacing-lg;
@@ -158,8 +159,8 @@
   .contacto-section {
     padding: variables.$spacing-xl;
   }
-  
+
   .form-container {
     max-width: 600px;
   }
-} 
+}

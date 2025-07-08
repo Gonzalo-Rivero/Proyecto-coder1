@@ -1,14 +1,14 @@
 // Importo variables para usar breakpoints
 @use 'variables';
 
-// Mixin para flexbox centrado
+
 @mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-// Mixin para flexbox columna centrado
+
 @mixin flex-column-center {
   display: flex;
   flex-direction: column;
@@ -26,7 +26,7 @@
 // Mixin para hover effects
 @mixin hover-effect($property, $value) {
   @include transition($property);
-  
+
   &:hover {
     #{$property}: $value;
   }
@@ -34,31 +34,55 @@
 
 // Mixin para media queries
 @mixin media-query($breakpoint) {
-  @if $breakpoint == xs {
-    @media (max-width: variables.$breakpoint-xs) { @content; }
-  } @else if $breakpoint == sm {
-    @media (max-width: variables.$breakpoint-sm) { @content; }
-  } @else if $breakpoint == md {
-    @media (max-width: variables.$breakpoint-md) { @content; }
-  } @else if $breakpoint == lg {
-    @media (max-width: variables.$breakpoint-lg) { @content; }
-  } @else if $breakpoint == xl {
-    @media (max-width: variables.$breakpoint-xl) { @content; }
-  } @else if $breakpoint == xxl {
-    @media (max-width: variables.$breakpoint-xxl) { @content; }
-  } @else if $breakpoint == min-xl {
-    @media (min-width: variables.$breakpoint-xl) { @content; }
-  } @else if $breakpoint == min-lg {
-    @media (min-width: variables.$breakpoint-lg) { @content; }
+  @if $breakpoint ==xs {
+    @media (max-width: variables.$breakpoint-xs) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint ==sm {
+    @media (max-width: variables.$breakpoint-sm) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint ==md {
+    @media (max-width: variables.$breakpoint-md) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint ==lg {
+    @media (max-width: variables.$breakpoint-lg) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint ==xl {
+    @media (max-width: variables.$breakpoint-xl) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint ==xxl {
+    @media (max-width: variables.$breakpoint-xxl) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint ==min-xl {
+    @media (min-width: variables.$breakpoint-xl) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint ==min-lg {
+    @media (min-width: variables.$breakpoint-lg) {
+      @content;
+    }
   }
 }
 
-// Mixin para gradiente animado
-@mixin gradient-animation {
-  background: linear-gradient(270deg, variables.$secondary-color, variables.$primary-color);
-  background-size: 400% 400%;
-  animation: gradientAnimation variables.$transition-slow ease infinite;
-}
 
 // Mixin para overlay
 @mixin overlay($opacity: 0.55) {
@@ -84,14 +108,14 @@
   border-radius: 5px;
   cursor: pointer;
   @include transition;
-  
+
   &:hover {
     background-color: darken($bg-color, 10%);
     transform: translateY(-2px);
   }
 }
 
-// Mixin para imágenes responsivas
+// Mixin para imágenes responsive
 @mixin responsive-image($max-width: 100%, $height: auto) {
   max-width: $max-width;
   height: $height;
@@ -101,4 +125,4 @@
 // Mixin para sombras
 @mixin box-shadow($x: 0, $y: 2px, $blur: 10px, $color: rgba(variables.$black, 0.1)) {
   box-shadow: $x $y $blur $color;
-} 
+}

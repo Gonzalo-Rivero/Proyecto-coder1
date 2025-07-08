@@ -9,33 +9,35 @@
   gap: variables.$spacing-md;
   padding: variables.$spacing-lg;
   width: 100%;
-  max-width: 1400px; // Más ancho para mejor distribución
+  max-width: 1400px; 
   margin: 0 auto;
 
   @include mixins.media-query(1200px) {
     grid-template-columns: repeat(3, 1fr);
   }
+
   @include mixins.media-query(900px) {
     grid-template-columns: repeat(2, 1fr);
   }
+
   @include mixins.media-query(md) {
     grid-template-columns: 1fr;
     gap: variables.$spacing-sm;
     padding: variables.$spacing-sm;
   }
 
-  > div {
+  >div {
     min-width: 250px;
     background: variables.$white;
     border-radius: 15px;
     padding: 30px;
     text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     @include mixins.transition(transform);
 
     &:hover {
       transform: translateY(-10px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 
       h3 {
         color: variables.$secondary-color;
@@ -69,17 +71,18 @@
   gap: variables.$spacing-md;
   padding: variables.$spacing-lg;
   width: 100%;
-  max-width: 1400px; // Más ancho para mejor distribución
+  max-width: 1400px; 
   margin: 0 auto;
 
   @include mixins.media-query(1200px) {
     grid-template-columns: repeat(2, 1fr);
   }
+
   @include mixins.media-query(900px) {
     grid-template-columns: 1fr;
   }
 
-  > * {
+  >* {
     min-width: 250px;
   }
 
@@ -96,14 +99,14 @@
   div {
     text-align: center;
     padding: 30px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     background: variables.$white;
     @include mixins.transition(transform);
 
     &:hover {
       transform: translateY(-10px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 
       h3 {
         color: variables.$secondary-color;
@@ -139,4 +142,4 @@
     font-size: 1.1rem;
     margin: 20px 0 5px 0;
   }
-} 
+}

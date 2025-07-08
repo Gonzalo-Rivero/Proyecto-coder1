@@ -12,7 +12,7 @@ table {
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  font-size: 1.25rem; // Más grande
+  font-size: 1.25rem; 
   box-sizing: border-box;
   position: relative;
   left: 50%;
@@ -21,7 +21,7 @@ table {
 
 th,
 td {
-  padding: 28px 20px; // Más padding para mejor visibilidad
+  padding: 28px 20px; 
   text-align: center;
   border-bottom: 1px solid variables.$light-gray;
 }
@@ -44,7 +44,7 @@ tr:hover {
   transition: all 0.3s ease;
 }
 
-// Media queries para responsividad
+// Media queries para responsive
 @include mixins.media-query(md) {
   table {
     font-size: variables.$font-size-sm;

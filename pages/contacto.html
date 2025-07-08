@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="icon" href="../img/escudobueno.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="description"
+        content="Contacta al Club El Nacional Rugby en Bahía Blanca: email, teléfono, dirección y formulario de contacto para inscripciones, consultas y más.">
+    <meta name="keywords"
+        content="contacto Club El Nacional, rugby Bahía Blanca contacto, dirección El Nacional, teléfono club rugby, formulario contacto">
+    <meta name="author" content="Gonzalo Rivero">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Contacto – Club El Nacional Rugby" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://clubelnacionalrugby.netlify.app/pages/contacto" />
+    <meta property="og:image" content="https://clubelnacionalrugby.netlify.app/img/Logo-original_.png" />
+    <meta property="og:description"
+        content="Escríbenos o visítanos en Bahía Blanca: email, teléfono y formulario de contacto del Club El Nacional Rugby." />
+    <meta property="og:site_name" content="Rugby Club El Nacional" />
 </head>
+
 <body>
     <header> <!--Cabecera -->
         <nav class="navbar navbar-expand-lg">
@@ -59,43 +77,62 @@
     <main>
         <h1 class="titulos">Página de contacto</h1>
         <section>
-            <div>
-                <h2>🗺️¿Donde encontrarnos?🗺️:</h2>
-                <a href="https://maps.app.goo.gl/Cm5kp2SRfhXX16W66" target="_blank" class="location-cen">14 de Julio 3250</a> 
-                <h2>🕙Horario de atención🕗:</h2>
-                <p class="horario">Lunes a Viernes de 10 a 20 hs.</p>
-                <h2>🕗Horario de entrenamientos🕙:</h2>
-                <p class="horario">Lunes, Martes y Jueves de 20 a 22 hs. (plantel superior)</p>
-            </div>
+            <article class="card">
+                <div class="card__content">
+                    <h2>🕙Horario de atención🕗:</h2>
+                    <p class="horario">Lunes a Viernes de 10 a 20 hs.</p>
+
+                </div>
+            </article>
+            <br>
+            <article class="card">
+                <div class="card__content">
+                    <h2>🕗Horario de entrenamientos🕙:</h2>
+                    <p class="horario">Lunes, Martes y Jueves de 20 a 22 hs. (plantel superior)</p>
+                </div>
+            </article>
+        </section>
+        <br>
+        <section>
+            <article class="card">
+                <div class="card__content">
+                    <h2>🗺️¿Donde encontrarnos?🗺️:</h2>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.4561915940026!2d-62.221580599999996!3d-38.7073341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95eda376efd06a27%3A0x50c30d7f1563f1ce!2sClub%20El%20Nacional!5e0!3m2!1ses-419!2sar!4v1751940568013!5m2!1ses-419!2sar"
+                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" class="card__img"></iframe>
+                    <a href="https://maps.app.goo.gl/Cm5kp2SRfhXX16W66" target="_blank" class="location-cen">14 de Julio
+                        3250</a>
+                </div>
+            </article>
         </section>
         <section class="content">
-        <div class="form-center-container">
-            <div class="form-container">
-                <h1>¿Queres ser parte de esta familía?</h1>
-                <form class="form" aria-label="Formulario de contacto para enviar un mensaje al CEN">
-                    <div class="form-group">
-                        <label for="nombre">Nombre y Apellido</label>
-                        <input type="name" id="name" name="name" required
-                            aria-label="Campo para ingresar tu nombre">
-                        <label for="documento">Documento</label>
-                        <input type="doc" id="doc" name="doc" required
-                            aria-label="Campo para ingresar tu documento">
-                        <label for="nacimiento">Fecha de nacimiento</label>
-                        <input type="date" id="date" name="date" required
-                            aria-label="Campo para ingresar tu fecha de nacimiento">
-                        <label for="telefono">Número de teléfono</label>
-                        <input type="tel" id="tel" name="tel" required
-                            aria-label="Campo para ingresar tu teléfono">
-                        <label for="email">Correo electrónico</label>
-                        <input type="email" id="email" name="email" required
-                            aria-label="Campo para ingresar tu correo electrónico">
-                    </div>
-                    <div>
-                        <p>Dejanos tus datos y nos contactaremos.</p>
-                        <button class="form-submit-btn" type="submit" aria-label="Enviar mensaje">Enviar</button>
-                    </div>
-                </form>
-            </div>
+            <div class="form-center-container">
+                <div class="form-container">
+                    <h1>¿Queres ser parte de esta familía?</h1>
+                    <form class="form" aria-label="Formulario de contacto para enviar un mensaje al CEN">
+                        <div class="form-group">
+                            <label for="nombre">Nombre y Apellido</label>
+                            <input type="name" id="name" name="name" required
+                                aria-label="Campo para ingresar tu nombre">
+                            <label for="documento">Documento</label>
+                            <input type="doc" id="doc" name="doc" required
+                                aria-label="Campo para ingresar tu documento">
+                            <label for="nacimiento">Fecha de nacimiento</label>
+                            <input type="date" id="date" name="date" required
+                                aria-label="Campo para ingresar tu fecha de nacimiento">
+                            <label for="telefono">Número de teléfono</label>
+                            <input type="tel" id="tel" name="tel" required aria-label="Campo para ingresar tu teléfono">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email" required
+                                aria-label="Campo para ingresar tu correo electrónico">
+                        </div>
+                        <div>
+                            <p>Dejanos tus datos y nos contactaremos.</p>
+                            <button class="form-submit-btn" type="submit" aria-label="Enviar mensaje">Enviar</button>
+                        </div>
+                    </form>
+                </div>
         </section>
     </main>
 
@@ -103,13 +140,21 @@
         <div class="footer-container">
             <a href="../index.html"><img class="escudo" src="../img/escudobueno.png" alt="Logo Club El Nacional"></a>
             <div class="social-links">
-                <a class="footerpie" href="https://maps.app.goo.gl/Cm5kp2SRfhXX16W66" target="_blank"><i class="fa-solid fa-location-dot"></i> Ubicación</a>
-                <a class="footerpie" href="https://www.instagram.com/rugbycen/" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                <a class="footerpie" href="https://www.youtube.com/@CENOficial" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube</a>
-                <a class="footerpie" href="https://api.whatsapp.com/send/?phone=5492916411271&text&type=phone_number&app_absent=0" target="_blank"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a>
+                <a class="footerpie" href="https://maps.app.goo.gl/Cm5kp2SRfhXX16W66" target="_blank"><i
+                        class="fa-solid fa-location-dot"></i> Ubicación</a>
+                <a class="footerpie" href="https://www.instagram.com/rugbycen/" target="_blank"><i
+                        class="fa-brands fa-instagram"></i> Instagram</a>
+                <a class="footerpie" href="https://www.youtube.com/@CENOficial" target="_blank"><i
+                        class="fa-brands fa-youtube"></i> YouTube</a>
+                <a class="footerpie"
+                    href="https://api.whatsapp.com/send/?phone=5492916411271&text&type=phone_number&app_absent=0"
+                    target="_blank"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a>
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
